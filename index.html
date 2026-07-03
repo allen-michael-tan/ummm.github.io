@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi hehe</title>
+
+<style>
+body{
+    margin:0;
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg,#ffe6f2,#fff8fc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:#444;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:700px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+    animation:fade 0.4s;
+}
+
+h2{
+    margin-top:0;
+    color:#ff5f9e;
+}
+
+.buttons{
+    margin-top:35px;
+}
+
+button{
+    background:#ff7fb5;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    margin:10px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#ff5f9e;
+    transform:scale(1.05);
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="page"></div>
+
+<script>
+
+const page = document.getElementById("page");
+
+function showPage(num){
+
+switch(num){
+
+case 1:
+page.innerHTML=`
+<h2>Hi Rishelly!! hehe 👋</h2>
+
+<p>It's a bit of a yapping from me.</p>
+
+<div class="buttons">
+<button onclick="showPage(2)">Yap lor</button>
+<button onclick="closePage()">Uhhh... bz HAHA</button>
+</div>
+`;
+break;
+
+case 2:
+page.innerHTML=`
+<p>
+So there's something I wanna ask, but I'm still kinda shy to ask irl
+(and dun rlly have the opportunity i suppose) so made this thingy.
+<br><br>
+Butttt i hope things dont change between us cuz I really do like the idea
+of being close friends with u hehe even if u r quite bz nowadays.
+<br><br>
+Tbh u r my most unexpected friend in uni cuz most ppl I meet is in engineering,
+but u r one of the most fun, kind, and nice person.
+So thanks for sending that Adolf sticker to let me know we defi can vibe HAHA.
+</p>
+
+<div class="buttons">
+<button onclick="showPage(3)">Ok humor me</button>
+<button onclick="closePage()">Next time bah</button>
+</div>
+`;
+break;
+
+case 3:
+page.innerHTML=`
+<p>
+Ik i spam u q alot of reels ah HAHA, oopsies.
+But luckily u got respond to some of them.
+<br><br>
+And hope i nvr disturb u too much smtimes,
+but if i did, must tell me okayy.
+<br><br>
+And the 👉👈 emojis is rlly cuz im abit shy to send those texts haha.
+But it is very nice hanging out with you,
+like i rlly can be myself arnd u,
+and umm i rlly find you v cute,
+adorbs n pretty ❤️
+<br><br>
+Shoooo what I wanna ask is....
+</p>
+
+<div class="buttons">
+<button onclick="showPage(4)">Continue (yes im stalling heh)</button>
+</div>
+`;
+break;
+
+case 4:
+page.innerHTML=`
+
+<p style="font-size:24px;">
+Do u wanna go on a date?
+<br><br>
+Like date date 👉👈
+</p>
+
+<div class="buttons">
+<button onclick="showPage(5)">Nehh</button>
+<button onclick="showPage(6)">Yurr</button>
+</div>
+`;
+break;
+
+case 5:
+page.innerHTML=`
+<h2>😊</h2>
+
+<p>
+Ok tis might be awks but ok la,
+smth is lifted off my chest haha.
+<br><br>
+But umm let's not drift apart ok,
+i rlly consider u a close friend :)
+<br><br>
+<b>P.s.</b>
+The buttons u press actly dun get recorded,
+so irdk what option u choose.
+So umm yeah...
+it can technically be a Schrödinger's cat situation for me.
+<br><br>
+(If u dun reveal then i will take it as u nvr scan,
+and that's ok too, so things stay the same ❤️)
+</p>
+
+<div class="buttons">
+<button onclick="closePage()">Close</button>
+</div>
+`;
+break;
+
+case 6:
+page.innerHTML=`
+<h2>🥹❤️</h2>
+
+<p>
+Yayyy hehe 😊
+<br><br>
+Ok if this is irl, i actlly will be smiling alot alot, and prolly be loss for words haha, but will be vvv happy heheh.
+<br><br>
+<b>P.s.</b>
+The buttons u press actly dun get recorded,
+so irdk what option u choose.
+<br><br>
+N i know u r bz with intern n hangouts with friends now,
+so we can find a common date that both of us can go out tgt okiiii.
+</p>
+
+<div class="buttons">
+<button onclick="closePage()">❤️</button>
+</div>
+`;
+break;
+
+}
+
+}
+
+function closePage(){
+
+page.innerHTML=`
+<h2>Hehe</h2>
+
+<p>
+Thanks for reading 😊
+</p>
+`;
+
+setTimeout(()=>{
+    window.close();
+},500);
+
+}
+
+showPage(1);
+
+</script>
+
+</body>
+</html>
